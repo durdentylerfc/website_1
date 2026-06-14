@@ -1,0 +1,7 @@
+.swp   
+.hg 
+.git
+.svn
+.DS_Store
+.idea
+*.iml 

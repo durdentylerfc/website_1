@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Events Example</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+    #hoverBox {
+        width: 150px; height: 150px; background: lightblue;
+        display: flex; align-items: center; justify-content: center;
+        border: 2px solid #333; margin-top: 10px;
+    }
+    #output { margin-top: 15px; font-weight: bold; }
+</style>
+</head>
+<body>  
+
+<h2>JavaScript Events Demo</h2>
+
+<!-- Click Event -->
+<button id="clickBtn">Click Me</button>
+
+<!-- Mouseover Event -->
+<div id="hoverBox">Hover over me</div>
+
+<!-- Form Submit Event -->
+<form id="myForm">
+    <label>Enter your name: <input type="text" id="nameInput" required></label>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Output -->
+<div id="output"></div>
+
+<script>
+// Click Event
+document.getElementById("clickBtn").addEventListener("click", function() {
+    document.getElementById("output").textContent = "Button was clicked!";
+});
+
+// Mouseover & Mouseout Events
+const hoverBox = document.getElementById("hoverBox");
+hoverBox.addEventListener("mouseover", function() {
+    hoverBox.style.backgroundColor = "lightgreen";
+    document.getElementById("output").textContent = "Mouse is over the box!";
+});
+hoverBox.addEventListener("mouseout", function() {
+    hoverBox.style.backgroundColor = "lightblue";
+    document.getElementById("output").textContent = "Mouse left the box.";
+});
+
+// Form Submit Event
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent page reload
+    const name = document.getElementById("nameInput").value.trim();
+    if (name) {
+        document.getElementById("output").textContent = `Hello, ${name}!`;
+    } else {
+        document.getElementById("output").textContent = "Please enter a valid name.";
+    }
+});
+</script>
+
+</body>
+</html>
