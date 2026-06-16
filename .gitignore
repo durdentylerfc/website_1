@@ -5,3 +5,6 @@
 .DS_Store
 .idea
 *.iml 
+copy_paste_code.md
+.againenv 
+.virtualenv
