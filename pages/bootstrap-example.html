@@ -5,8 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .button-center {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,6 +43,22 @@
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
   </div>
+</div>
+<!-- example showing XSS injection -->
+<p>
+  <script>
+    alert("hello Am a XSS vulnerability 😮🦖🚀😹");
+
+    function verbose() {
+      alert("hello Am a XSS vulnerability 😮🦖🚀😹");
+    }
+  </script>
+
+  
+</p>
+<div class="button-center">
+  <input type="button" value="Test" onclick="verbose()">
+  <button data-toggle="tooltip" title="My tooltip">Hover me</button>
 </div>
 
 </body>
