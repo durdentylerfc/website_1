@@ -52,13 +52,16 @@
     function verbose() {
       alert("hello Am a XSS vulnerability 😮🦖🚀😹");
     }
+    
   </script>
 </p>
+
+  
 
 <div class="button-center">
   <input type="button" value="Test" onclick="verbose()">
   <button data-toggle="tooltip" title="My tooltip">Hover me</button>
 </div>
-  
+  <script src="/scripts/main.js"></script>
 </body>
 </html>

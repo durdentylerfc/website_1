@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    
+    <title>Water To The World</title>
+    <h1>Sign Up</h1>
+    <p>You are currently using about <span id="percent"></span>% of your estimated storage quota (<span id="quota"></span>).</p>
+
+</head>
+<style>
+    h1 {
+        color: rgb(86, 3, 155);
+        font-size: 30px;
+        text-align: center; 
+    }
+    p {
+        font-size: 20px;
+        color: rgb(86, 3, 155);
+        margin-bottom: 20px;
+    }
+    body {
+        margin: 50px;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+    #first-container {
+        background-color: darksalmon; 
+        width: 200px;
+        margin: 0 auto;
+        width: 300px;
+    }
+    #footer-container {
+        background-color: darksalmon; 
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+</style> 
+<body>
+    <div id="first-container">
+        <form method="POST" action=""cgi-bin/">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <input type="submit" value="Submit">
+    </div>
+    <div id="parent-id"> 
+        <p>hello world-1</p>
+        <p>hello world-2</p>
+        <p class="test">
+            <p>'Hello Word-3'</p> 
+        <p>hello world-4</p>
+    </div>
+    <div id="main">
+        <p>testing</p>
+        <p class="test">testing-alpha-boomerang-status</p>
+    </div>
+    <script>console.log("SO this test is working!");</script>
+    <script>document.getElementById("main").getElementsByClassName("test");</script>
+    <script>document.getElementsByClassName('test');</script>
+    <script>
+        const testElements = document.getElementsByClassName('test');
+        for (let i = 0; i < testElements.length; i++) {
+            testElements[i].style.color = 'red';
+        }; 
+            console.log("testElements:", testElements);
+            console.log(`Number of elements with class 'test': ${testElements.length}`);
+        element.getElementsByClassName('test').style.color = 'red';
+    </script>
+    <a href="/pages/testing_alpha_css.html" class="btn btn-primary">Go to Testing Out CSS</a>
+    <a href="/pages/example.html" class="btn btn-secondary">Go to Example</a>
+    <a href="/index.html" class="btn btn-third">Home</a>
+    <!--<script src="scripts/script.js"></script>--> 
+    <script>
+        navigator.storage.estimate().then((estimate) => {
+        document.getElementById("percent").textContent = (
+            (estimate.usage / estimate.quota) *
+            100
+        ).toFixed(2);
+        document.getElementById("quota").textContent =
+            `${(estimate.quota / 1024 / 1024).toFixed(2)}MB`;
+        });
+        //document.getElementById("first-container").style.backgroundColor = "darksalmon"; 
+        
+    </script>
+    <footer>
+        <div id="footer-container"> 
+            <p>Contact us: <a href="mailto:support@watertheworld.org">support@watertheworld.org</a></p>
+        </div>
+        <p>&copy; 2024 Water To The World. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+<!--
+<a href="mailto:support@example.com?subject=Feedback%20Request&body=I%20have%20a%20question%20about%20your%20site">
+  Send Feedback
+</a>
+--> 
