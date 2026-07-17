@@ -4,4 +4,5 @@ playing around with web development to learn how to get around the internet and 
 
 ![Project Logo](./pics/venom93.png "Company Logo")
 
-[Check This Out ESP](https://github.com/durdentylerfc.github.io)
+[E S P](https://durdentylerfc.github.io)
+
