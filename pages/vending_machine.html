@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Vending Machine</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        background: #f4f4f4; 
+        padding: 20px; 
+    }
+    a {
+        margin: 100px;
+    }
+    .machine { 
+        background: #fff; 
+        padding: 20px; 
+        border-radius: 8px; 
+        width: 300px; 
+        margin: auto; 
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    }
+    h2 { 
+        text-align: center; 
+    }
+    .item { 
+        display: flex; 
+        justify-content: space-between; 
+        margin: 8px 0; 
+    }
+    button { 
+        padding: 5px 10px; 
+        cursor: pointer; 
+    }
+    .output { 
+        margin-top: 15px; 
+        padding: 10px; 
+        background: #e9e9e9; 
+        border-radius: 5px; 
+        min-height: 40px; 
+    }
+</style>
+</head>
+<body>
+
+<div class="machine">
+    <h2>Vending Machine</h2>
+    <div id="items"></div>
+    <input type="number" id="cash" placeholder="Insert cash ($)" min="0" step="0.01">
+    <button onclick="buyItem()">Buy</button>
+    <div class="output" id="output"></div>
+</div>
+
+    <a href="/pages/swipe_event.html">Swipe-Events</a>
+
+<script>
+// Vending machine items
+const products = [
+    { code: "A1", name: "Soda", price: 1.50 },
+    { code: "A2", name: "Chips", price: 1.00 },
+    { code: "A3", name: "Candy", price: 0.75 },
+    { code: "A4", name: "Water", price: 1.25 }
+];
+
+let selectedCode = null;
+
+// Display items
+const itemsDiv = document.getElementById("items");
+products.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = `
+        <span>${item.code} - ${item.name} ($${item.price.toFixed(2)})</span>
+        <button onclick="selectItem('${item.code}')">Select</button>
+    `;
+    itemsDiv.appendChild(div);
+});
+
+// Select an item
+function selectItem(code) {
+    selectedCode = code;
+    document.getElementById("output").innerText = `Selected: ${code}`;
+}
+
+// Buy item
+function buyItem() {
+    const cashInput = document.getElementById("cash");
+    const cash = parseFloat(cashInput.value);
+
+    if (!selectedCode) {
+        document.getElementById("output").innerText = "Please select an item.";
+        return;
+    }
+    if (isNaN(cash) || cash <= 0) {
+        document.getElementById("output").innerText = "Please insert valid cash.";
+        return;
+    }
+
+    const item = products.find(p => p.code === selectedCode);
+    if (!item) {
+        document.getElementById("output").innerText = "Invalid selection.";
+        return;
+    }
+
+    if (cash < item.price) {
+        document.getElementById("output").innerText = `Insufficient funds. ${item.name} costs $${item.price.toFixed(2)}.`;
+        return;
+    }
+
+    const change = (cash - item.price).toFixed(2);
+    document.getElementById("output").innerText = `Dispensing ${item.name}. Change: $${change}`;
+    cashInput.value = "";
+    selectedCode = null;
+}
+</script>
+
+</body>
+</html>
+

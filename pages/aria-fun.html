@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aria Examples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    </head>
+        <style>
+            body {
+                display: grid; 
+                place-items: center;
+                background-color: aquamarine;
+            }
+            figure {
+                border: thin silver solid;
+                display: flex;
+                flex-flow: column;
+                padding: 5px;
+                max-width: 220px;
+                margin: auto;
+            }
+            h1 {
+                text-align: center;
+                color: #222222;
+            }
+            img {
+                max-width: 220px;
+                max-height: 150px;
+            }
+            ul {
+                color: blueviolet
+            }
+            figcaption {
+                background-color: #222222;
+                color: white;
+                font: italic smaller sans-serif;
+                padding: 3px;
+                text-align: center;
+            }
+            footer {
+                margin: 88px; 
+            }
+
+        </style>
+
+    <body>
+        <h1>ARIA aka is: Accessable Rich Internet Applications</h1>    
+            <figure>
+                <img
+                    src="/images/elephant.jpg"
+                    alt="Elephant at sunset" />
+                <figcaption>An elephant at sunset</figcaption>
+            </figure>
+            
+        <h2>Aria is a collection of HTML attributes that help assised technologies "AT" such as:</h2>  
+            <menu>
+                <li>screen readers</li>
+                <li>braille displays</li>
+                <li>speech recognition spoftware</li>  
+                <li>understand what your webpage is doing</li>
+            </menu>
+                <p>Kin to the present think of ARIA as a way of describing your webpage to people who cannot see it.</p>
+                    <button aria-label="Close">
+                        <svg 
+                            aria-hidden="true"
+                            focusable="false"
+                            width="17"
+                            height="17"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                            d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z"
+                            fill="black" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Aria Label -->
+                    <button aria-label="Search">
+                        🔍
+                    </button>
+                    <button aria-label="Close">
+                        ❎
+                    </button>
+                    <!-- Aria Hidden -->
+                    <span aria-hidden="True">
+                        *
+                    </span>
+                    <!-- Aria Expanded-->
+                     <button aria-expanded="False">
+                        Menu
+                     </button>
+                    <dialog id="myDialog"   >
+                        "..."
+                    </dialog>
+                
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+            <footer>
+                <div id="footer-container"> 
+                    <p>Contact us: <a href="mailto:support@watertheworld.org">support@watertheworld.org</a></p>
+                </div>
+                    <p>&copy; 2024 Water To The World. All rights reserved.</p>
+            </footer> 
+        <script src="/scripts/main.js" async defer></script>
+        <script src="/script/aira-fun.js" defer></script> 
+    </body>
+</html>
+

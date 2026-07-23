@@ -3,10 +3,12 @@
 .git
 .svn
 .DS_Store
-.idea
+.vscode 
 *.iml 
 copy_paste_code.md
 .againenv 
 .virtualenv
 /favicon_io
 notes21.md
+python_vending_machine.py 
+/play_files

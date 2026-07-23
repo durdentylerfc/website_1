@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tyler’s Metadata Profile</title>
+</head>
+<body>
+  <dl class="profile">
+    <dt class="property">author</dt>
+    <dd>The creator of the document.</dd>
+
+    <dt class="property">symbol</dt>
+    <dd>A semantic marker representing intentional architecture.</dd>
+
+    <dt class="property">coherence-level</dt>
+    <dd>An integer describing the structural alignment of the document.</dd>
+  </dl>
+</body>
+</html>
+
+
+
+STEPS YOU NEED TO FINISH: 👇
+
+  2️⃣ Reference it in your HTML
+In your pages:
+
+html
+<head profile="https://yourdomain.com/profile">
+This is now a valid HTML4-style profile reference.
+
+
+3️⃣ Define your metadata using your lexicon
+Example:
+
+html
+<meta name="symbol" content="unity">
+<meta name="coherence-level" content="5">
+
+
+4️⃣ Write a parser
+This is where it becomes real.
+
+You write a small tool (Python, JS, PHP, whatever) that:
+
+Fetches the profile URI
+
+Reads the <dl class="profile">
+
+Builds a dictionary of metadata definitions
+
+Validates <meta> tags in your pages
+
+Produces warnings, errors, or documentation
+
+This is exactly what XMDP was designed for.
+
+You would be reviving a dormant part of the web.

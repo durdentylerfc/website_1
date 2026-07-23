@@ -21,13 +21,12 @@
         <link rel="icon" type="image/svg+xml" href="/favicon_io/favicon.svg">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+        
 
     </head>
       <style>
-    
         body {
             margin: 0;
-
         }
         * {
             background-color: darksalmon; 
@@ -49,14 +48,16 @@
         .btn-primary {
             background-color: #007bff;
             color: white;
+            color: orange; 
         }
-        .radio-button {
-            display: block;
-            margin-bottom: 10px;
-        }
+        .btn.btn {
+          border: 5px solid gold; 
+        } 
+    
+             
+      </style>
       
         
-        </style>
 
 
     <body>
@@ -64,17 +65,19 @@
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <input type="submit" value="Submit">
+        <!-- or like this -->
+        <label for="email">Enter your email</label>
+        <input type="email" valie="Submit" id="email" pattern=".@example\.com" sized="30" required>
 
-      
-      <h2>Radio Button</h2>
-        <div id="radio-buttons">
-          <input type="radio" id="option1" name="options" value="option1">
-          <label for="option1">Option 1</label><br>
-          <input type="radio" id="option2" name="options" value="option2 ">
-          <label for="option2">Option 2</label><br>
-          <input type="radio" id="option3" name="options" value="option3">
-          <label for="option3">Option 3</label><br>
-        </div>
+       <form action="/action_page.php" method="get">
+         <label for="fname">First name:</label>
+         <input type="text" id="fname" name="fname"><br><br>
+         <label for="lname">Last name:</label>
+         <input type="text" id="lname" name="lname"><br><br>
+         <input type="submit" value="Submit">
+       </form>
+
+
       <h1>Storage Usage</h1>
         <p>You're currently using about <span id="percent"></span>% of your estimated
           storage quota (<span id="quota"></span>).</p>
@@ -82,42 +85,39 @@
       <div id="buttons"></div>  
         <a href="/pages/testing_alpha_css.html" class="btn btn-primary">Go to Testing Out CSS</a>
         <a href="pages/example.html" class="btn btn-primary">Go to Example</a>
-      </div>
+        <a href="pages/attacker.html" class="btn btn-danger">Go to Attacker</a>
         <a href="pages/for_loop.html" class="btn btn-secondary">Go to For Loop Example</a>
         <a href="pages/bootstrap-example.html" class="btn btn-success">Go to Bootstrap Example</a>
+        <a href="pages/vending_machine.html" class="btn vending-machine">Vending Machine!</a>
+        <a href="pages/metaprofile.html" class="btn btn-special">MetaProfile</a>
 
-      <script>
-        navigator.storage.estimate().then((estimate) => {
-          document.getElementById("percent").textContent = (
-            (estimate.usage / estimate.quota) *
-            100
-          ).toFixed(2);
-          document.getElementById("quota").textContent =
-            `${(estimate.quota / 1024 / 1024).toFixed(2)}MB`;
-        });
 
-        console.log('i am a loop header just like in C'); 
-        
-        for (let i = 0; i < 5; i++) {
-          const button = document.createElement("a");
-          button.href = "#";
-          button.className = "btn btn-primary";
-          button.textContent = `Button ${i + 1}`;
-          document.getElementById("buttons").appendChild(button);
-        }
-        for (let i = 0; i < 5; i++) {
-          // Code to be executed in each iteration 
-        }
-      </script>
-    
-      <footer>
-        <div id="footer-container"> 
-            <p>Contact us: <a href="mailto:support@watertheworld.org">support@watertheworld.org</a></p>
-        </div>
-            <p>&copy; 2024 Water To The World. All rights reserved.</p>
-    </footer>
+
+        <script>
+            const el = document.getElementById("myInput"); 
+              el.name = "username";
+              el.setAttribute("name", "username"); 
+            
+            // DOMStringList.getElementById();
+            /* the name attribute is associate with these 👇 
+             <input>, <select>, <textarea>, <button>, <form>, <iframe>, <map>, <meta>, <object>, <param>*/
+            for (let i = 0; i < 5; i++) {
+              const button = document.createElement("a");
+              button.href = "#";
+              button.className = "btn btn-primary";
+              button.textContent = `Button ${i + 1}`; 
+              document.getElementById("buttons").appendChild(button);
+            } 
+
+            
+        </script>
+          
+          <footer>
+            <div id="footer-container"> 
+                <p>Contact us: <a href="mailto:support@watertheworld.org">support@watertheworld.org</a></p>
+            </div>
+                <p>&copy; 2024 Water To The World. All rights reserved.</p>
+        </footer>
+      <script src="scripts/main.js"></script>
     </body>
 </html>
-
-
-  
