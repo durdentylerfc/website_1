@@ -18,6 +18,8 @@
     <!--<head profile=""uri> profile %URI; #IMPLIED -- named dictionary of meta info ----> 
     <head profile="https://durdentylerfc923@github.io"></head>
 
+
+    
     <style>
         body {
             display: grid; 
@@ -43,20 +45,33 @@
             margin: 21px; 
             color: green
         }
-        
-
+        label {
+            padding-right: 10px; 
+            font-size: 2px;
+        }
     </style>
 
     <body>
         <h2></h2>
         <p><b>Notes</b></p>
-            <a class="nav-link active">About</a>
+            <a href="/pages/about.html" class="nav-link active">About</a>
             <a href="/pages/profile.html" class="nav-link">Profile</a>
-            <a href="/pages/aria-fun.html" class="btn btn-special">Aria-AT</a>
-            <a href="/pages/deflist.html" class="nav-link">dl</a>
+            <a href="/pages/aria-fun.html" class="nav-link">Aria-Fun-AT</a>
+            <a href="/pages/deflist.html" class="nav-link">Definition-list</a>
 
-        
+        <data></data>       
  
+             <div
+                id="percent-loaded"
+                role="progressbar"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100">
+           </div>
+          
+
+            <label for="Progress"></label>
+            <progress id="percent-loaded" value="75" max="100">75 %</progress>
         <script>
             const links = 
             document.querySelectorAll(".nav-link"); 
@@ -70,13 +85,21 @@
                 });
             });
             
-            
+          
             
         </script>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+       
         
+       
+
+
+
+
+
+
         <footer>
             <div id="footer-container"> 
                 <p>Contact us: <a href="mailto:support@watertheworld.org">support@watertheworld.org</a></p>

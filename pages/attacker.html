@@ -1,0 +1,63 @@
+<!-- Example of click-jacking utilizing z-index and opacity overlay-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Click Jacking Example + Horizontal Buttons</title>
+            <style>
+                #victimFrame {
+                    opacity: 0.01; /* nearly invisible */
+                    position: absolute;
+                    top: 50px;
+                    left: 50px;
+                    width: 300px;
+                    height: 200px;
+                    z-index: 2;
+                }
+
+                #baitButton {
+                    position: absolute;
+                    top: 50px;
+                    left: 50px;
+                    z-index: 3;
+                }
+                                /* Container for buttons */
+                .button-container {
+                    display: flex;              /* Arrange children in a row */
+                    gap: 10px;                   /* Space between buttons */
+                    justify-content: center;     /* Center horizontally */
+                    flex-wrap: wrap;             /* Wrap to next line if too many */
+                }
+
+                /* Button styling */
+                .button-container button {
+                    padding: 10px 20px;
+                    background-color: #007BFF;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .button-container button:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+    </head>
+
+    <body>
+        <button id="baitButton">Click here for a prize!</button>
+
+        <iframe id="victimFrame" src="victim.html"></iframe>
+
+        <div class="button-container">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+        </div>
+       
+    </body>
+</html>
+
+
