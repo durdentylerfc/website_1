@@ -2,7 +2,7 @@
 a website to see what we can do...
 playing around with web development to learn how to get around the internet and use github... 
 
-![Project Logo](./images/venom93.png "Company Logo")
+![Project Logo](./images/sirisys-template.png "Company Logo")
 
 [E S P](https://durdentylerfc.github.io)
 
