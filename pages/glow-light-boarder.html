@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glowing Border Example</title>
+<link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+
+<style>
+    body {
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .glow-box {
+        padding: 40px 60px;
+        border: 3px solid #00ffcc;
+        border-radius: 12px;
+        color: rgb(229, 13, 204);
+        font-size: 1.5rem;
+        text-align: center;
+        animation: glow 2s infinite alternate;
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+        0% {
+            box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+        }
+        100% {
+            box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="glow-box">
+    Does it taste good?  
+</div>
+
+</body>
+</html>

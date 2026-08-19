@@ -51,6 +51,84 @@
         }
     </style>
 
+         
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        </nav>
+        <!-- maybe you can finally integrate this somehow? i dunno just keep playing roun with it -->
+        <script nonce> 
+            window.GLOBAL_ENV = {
+            "NODE_ENV":"production",
+                "BUILT_AT":"1784791244134",
+                "HTML_TIMESTAMP":Date.now(),
+                "BUILD_NUMBER":"582977",
+                "PROJECT_ENV":"production",
+                "RELEASE_CHANNEL":"stable",
+                "VERSION_HASH":"5ea1303f3ea9a9dae2cb97eb6e20400c27e703cb",
+                "PRIMARY_DOMAIN":"discord.com",
+                "SENTRY_TAGS":{"buildId":"5ea1303f3ea9a9dae2cb97eb6e20400c27e703cb","buildType":"normal"}, <!--❓-->
+                "SENTRY_RELEASE":"2026-07-23-5ea1303f3ea9a9dae2cb97eb6e20400c27e703cb-discord_web",
+                "PUBLIC_PATH":"/assets/",
+                "LOCATION":"history",
+                "API_VERSION":9,"API_PROTOCOL":"https:",
+                "API_ENDPOINT":"//discord.com/api",
+                "GATEWAY_ENDPOINT":"wss://gateway.discord.gg",
+                "GATEWAY_ALT_ENDPOINT":"wss://gateway-aws.discord.gg",
+                "STATIC_ENDPOINT":"",
+                "ASSET_ENDPOINT":"//discord.com",
+                "MEDIA_PROXY_ENDPOINT":"//media.discordapp.net",
+                "IMAGE_PROXY_ENDPOINTS":"//images-ext-1.discordapp.net,//images-ext-2.discordapp.net",
+                "CDN_HOST":"cdn.discordapp.com","DEVELOPERS_ENDPOINT":"//discord.com",
+                "MARKETING_ENDPOINT":"//discord.com",
+                "WEBAPP_ENDPOINT":"//discord.com",
+                "WIDGET_ENDPOINT":"//discord.com/widget",
+                "SEO_ENDPOINT":"undefined",
+                "ADS_MANAGER_ENDPOINT":"//ads.discord.com",
+                "NETWORKING_ENDPOINT":"//router.discordapp.net",
+                "REMOTE_AUTH_ENDPOINT":"wss://remote-auth-gateway.discord.gg",
+                "RTC_LATENCY_ENDPOINT":"//latency.discord.media/rtc",
+                "INVITE_HOST":"discord.gg",
+                "GUILD_TEMPLATE_HOST":"discord.new",
+                "GIFT_CODE_HOST":"discord.gift",
+                "ACTIVITY_APPLICATION_HOST":"discordsays.com",
+                "MIGRATION_SOURCE_ORIGIN":"https://discordapp.com",
+                "MIGRATION_DESTINATION_ORIGIN":"https://discord.com",
+                "STRIPE_KEY":"pk_live_CUQtlpQUF0vufWpnpUmQvcdi",
+                "ADYEN_KEY":"live_E3OQ33V6GVGTXOVQZEAFQJ6DJIDVG6SY",
+                "BRAINTREE_KEY":"production_ktzp8hfp_49pp2rp4phym7387",
+                "MUX_ENV_KEY":"undefined","DEV_SESSION_KEY":"undefined",
+                "WEBAUTHN_ORIGIN":"discord.com",
+                "NATIVE_WEBSOCKET_ORIGIN":"undefined"
+            }
+<!--        https://evil.com/nonce?whatever--> 
+        </script> 
     <body>
         <h2></h2>
         <p><b>Notes</b></p>
@@ -58,10 +136,12 @@
             <a href="/pages/profile.html" class="nav-link">Profile</a>
             <a href="/pages/aria-fun.html" class="nav-link">Aria-Fun-AT</a>
             <a href="/pages/deflist.html" class="nav-link">Definition-list</a>
-
-        <data></data>       
+            <a href="/index.html" class="btn nav-link">Home Page</a>
+            <a href="/pages/playing_bootstrap.html">Bootstrap Play</a>
+            <a href="/pages/glow-light-boarder.html">Glow Light Boarder</a>
+         <data></data>       
  
-             <div
+            <div
                 id="percent-loaded"
                 role="progressbar"
                 aria-valuenow="75"
